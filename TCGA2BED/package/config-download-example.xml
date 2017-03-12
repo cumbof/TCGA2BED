@@ -1,0 +1,20 @@
+<tcga2bed>
+	
+	<operation id="0">
+		<cmd name="downloadmeta" />
+		<attribute name="disease" value="KIRP" />
+		<attribute name="output_folder" value="C:/downloads/" />
+		<attribute name="autoextract" value="1" />
+	</operation>
+	
+	<operation id="1">
+		<cmd name="downloaddata">
+		<attribute name="disease" value="KIRP" />
+		<attribute name="data_type" value="DNAMethylation450" />
+		<attribute name="output_folder" value="C:/downloads/" />
+		<attribute name="autoextract" value="1" />
+	</operation>
+	
+</tcga2bed>
+
+

@@ -1,0 +1,17 @@
+<tcga2bed>
+	
+	<operation id="0">
+		<cmd name="convert">
+		<attribute name="disease" value="KIRP" />
+		<attribute name="metadata" value="C:/downloads/KIRP_1dae287c-cc09-461e-9488-8d31be3a7325_record/Clinical/Biotab/"  />
+		<attribute name="additional_metadata" value="null" />
+		<attribute name="input_folder" value="C:/downloads/jhu-usc.edu_KIRP.HumanMethylation450.Level_3/" />
+		<attribute name="output_folder" value="C:/downloads/KIRP_DNAMethylation_BED/" />
+		<attribute name="data_type" value="DNAMethylation450" />
+		<attribute name="data_subtype" value="null" />
+		<attribute name="magetab_folder" value="null" />
+	</operation>
+	
+</tcga2bed>
+
+
