@@ -81,6 +81,7 @@ public class CNVParser extends BioParser {
                         data_map.put("nocnv", nocnv_data);
                         try {
                             File output = new File(out_dir_path + bcr_aliquot_barcode + gendata_ext);
+                            System.err.println(output.getAbsolutePath());
                             output.createNewFile();
                             FileOutputStream fos = new FileOutputStream(output.getAbsolutePath());
                             PrintStream out = new PrintStream(fos);

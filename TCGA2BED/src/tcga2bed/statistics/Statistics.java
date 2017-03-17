@@ -25,7 +25,7 @@ import tcga2bed.util.HTTPExpInfo;
 public class Statistics {
     
     public static void main(String[] args) {
-        String rootFolder = "D:/ftp-root/bed/";
+        String rootFolder = "E:/ftp-root/bed/";
         HashMap<String, HashMap<String, HashSet<String>>> gendata_statistics = new HashMap<>();
             
         File[] diseases = (new File(rootFolder)).listFiles();
@@ -85,7 +85,9 @@ public class Statistics {
             out.println("{\n\"newData\": [");
             
             int gendata_statistics_length = gendata_statistics.size();
-            for (String disease: gendata_statistics.keySet()) {
+            ArrayList<String> diseases = new ArrayList<>(gendata_statistics.keySet());
+            Collections.sort(diseases);
+            for (String disease: diseases) {
                 ArrayList<String> dts = new ArrayList<>(gendata_statistics.get(disease).keySet());
                 Collections.sort(dts);
                 for (String data_type: dts) {

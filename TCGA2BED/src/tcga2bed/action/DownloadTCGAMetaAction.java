@@ -17,12 +17,8 @@ public class DownloadTCGAMetaAction extends Action {
 
     private boolean extractPackage = false;
 
-	// QUERY EXAMPLE: http://tcga-data.nci.nih.gov/tcga/damws/jobprocess/xml?disease=BRCA&platformType=C
-    /*
-     * 
-     *  TESTARE I PARAMETRI DEL FILTRO
-     * 
-     */
+    // QUERY EXAMPLE: http://tcga-data.nci.nih.gov/tcga/damws/jobprocess/xml?disease=BRCA&platformType=C
+    
     /*private static final String useXML_ext = ".xml";
      private static final String record_ext = ".tar.gz";
      private static String metadata_query_base0 = "http://tcga-data.nci.nih.gov/tcga/damws/jobprocess/";
@@ -33,9 +29,11 @@ public class DownloadTCGAMetaAction extends Action {
      private static String metadata_query_param1 = "platformType=";
 	
      private static String metadata_query_concat_params = "&";*/
+    
     @Override
     public void execute(String[] args) {
         try {
+            // automatically extract data flag
             if (args[4].equals("1"))
                 this.setExtract(true);
         } catch (Exception e) {}
@@ -120,12 +118,7 @@ public class DownloadTCGAMetaAction extends Action {
                     return;
                 }
             }
-            /*else {
-             Main.printException("Unexpected thread death");
-             return;
-             }*/
             Main.printException("COMPLETED!", true);
-
         } else {
             Main.printException("Unexpected thread death", true);
             //return;
@@ -133,8 +126,8 @@ public class DownloadTCGAMetaAction extends Action {
 
     }
 
-	// clinicalORbiospecimen = "CLINICAL" || "BIOSPECIMEN" 
-	/*private static boolean storeDataInDB(File clinical_xml_dir, String clinicalORbiospecimen, HashMap<String, String> parameter2value_filterMap, String metaTable, String disease_abbreviation) {
+    // clinicalORbiospecimen = "CLINICAL" || "BIOSPECIMEN" 
+    /*private static boolean storeDataInDB(File clinical_xml_dir, String clinicalORbiospecimen, HashMap<String, String> parameter2value_filterMap, String metaTable, String disease_abbreviation) {
      System.err.println("CLINICAL DIR PATH: " + clinical_xml_dir.getAbsolutePath());
      HashMap<String, HashMap<String, String>> patient2clinicalDataMap = TCGAQueryParser.getMetadata(clinical_xml_dir, clinicalORbiospecimen, parameter2value_filterMap, disease_abbreviation);
      System.err.println("PATIENTS MAP SIZE: " + patient2clinicalDataMap.size());
@@ -146,6 +139,7 @@ public class DownloadTCGAMetaAction extends Action {
      Facade facade = new Facade();
      return facade.insertMetadata(patient2clinicalDataMap.keySet(), metaTable);
      }	*/
+    
     public void setExtract(boolean bool) {
         extractPackage = bool;
     }

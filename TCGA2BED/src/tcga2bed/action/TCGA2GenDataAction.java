@@ -96,7 +96,7 @@ public class TCGA2GenDataAction extends Action {
         Settings.setMAGETABPath(MAGETAB_PATH);
         
         try {
-            gendata_ext = "."+args[12].toLowerCase();
+            gendata_ext = "."+args[13].toLowerCase();
             out_format = args[13].toLowerCase();
             metadata_ext = gendata_ext + metadata_ext;
         } catch (ArrayIndexOutOfBoundsException e) {

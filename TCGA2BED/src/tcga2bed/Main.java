@@ -22,9 +22,7 @@ public class Main {
 
     /*
      *  QUERY EXAMPLE - [WARNING: NOT VALID -> TCGA DATA PORTAL IS NO LONGER AVAILABLE: June 30th, 2016] 
-     *  
      *  http://tcga-data.nci.nih.gov/tcgadccws/GetHTML?query=Archive[Platform[@name=Genome_Wide_SNP_6]][@isLatest=1][ArchiveType[@type=Level_3]][Disease[@abbreviation=BRCA]]
-     *  
      */
     private static BufferedReader br;
     private static String _String;
@@ -58,20 +56,21 @@ public class Main {
 
             /* DOWNLOAD DATA EXAMPLE */
             /*args = new String[7];
-             args[0] = "downloaddata";								//action
-             args[1] = "IlluminaGA_DNASeq_curated";					//platform
-             args[2] = "1";											//isLatest
-             args[3] = "Level_2";									//data_level
-             args[4] = "BLCA";										//tumor_type
-             args[5] = "DNASeq";										//data_type
-             args[6] = "c:/users/fabio/desktop/data_download/";		//download_folder
+             args[0] = "downloaddata";                                                                                      //action
+             args[1] = "IlluminaGA_DNASeq_curated";                                                                         //platform
+             args[2] = "1";                                                                                                 //isLatest
+             args[3] = "Level_2";                                                                                           //data_level
+             args[4] = "BLCA";                                                                                              //tumor_type
+             args[5] = "DNASeq";                                                                                            //data_type
+             args[6] = "c:/users/fabio/desktop/data_download/";                                                             //download_folder
              Action action = new DownloadTCGADataAction();*/
+            
             /* DOWNLOAD METADATA EXAMPLE */
             /*args = new String[4];
-             args[0] = "downloadmeta";								//action
-             args[1] = "UVM";										//tumor_type
-             args[2] = "C";											//tcga_parameter_for_metadata_download
-             args[3] = "C:/Users/Fabio/Desktop/meta_download/";		//download_folder
+             args[0] = "downloadmeta";                                                                                      //action
+             args[1] = "UVM";                                                                                               //tumor_type
+             args[2] = "C";                                                                                                 //tcga_parameter_for_metadata_download
+             args[3] = "C:/Users/Fabio/Desktop/meta_download/";                                                             //download_folder
              Action action = new DownloadTCGAMetaAction();*/
             
             /* CONVERSION EXAMPLE */
@@ -86,8 +85,8 @@ public class Main {
             args[7] = "gene";                                                                                               //data_subtype : for RNASeq only [gene, exon, spljxn]
             args[8] = "C:/Users/Fabio/Desktop/config/ncbi_archive/";                                                        //entrezId_to_geneSymbol_local_db_dir
             args[9] = "C:/Users/Fabio/Desktop/config/ucsc_archive/knownGene.txt";                                           //knownGene UCSC db table
-            args[10] = "C:/Users/Fabio/Desktop/appdata/mirbase_archive/hsa.gff3";
-            args[11] = "D:/ftp-root/tcga_original/"+disease.toLowerCase()+"/"+data_type.toLowerCase()+"/mage-tab/";         // only for cnv
+            args[10] = "C:/Users/Fabio/Desktop/appdata/mirbase_archive/hsa.gff3";                                           //MIRBase db table
+            args[11] = "D:/ftp-root/tcga_original/"+disease.toLowerCase()+"/"+data_type.toLowerCase()+"/mage-tab/";         //Mage-Tab: for CNV data type only
             Action action = new TCGA2GenDataAction();
 
             System.err.println("DISEASE: " + args[1].toUpperCase());
@@ -103,7 +102,7 @@ public class Main {
             
             ArrayList<String> diseases = new ArrayList<>();
             diseases.add("ACC");
-            diseases.add("BLCA");
+            /*diseases.add("BLCA");
             diseases.add("BRCA");
             diseases.add("CESC");
             diseases.add("CHOL");
@@ -134,23 +133,23 @@ public class Main {
             diseases.add("THYM");
             diseases.add("UCEC");
             diseases.add("UCS");
-            diseases.add("UVM");
+            diseases.add("UVM");*/
 
             ArrayList<String> data_types = new ArrayList<>();
-            data_types.add("DNAMethylation450");
+            //data_types.add("DNAMethylation450");
             //data_types.add("DNASeq");
             //data_types.add("RNASeq");
             //data_types.add("RNASeqV2");
-            data_types.add("miRNASeq");
-            //data_types.add("CNV");
-            data_types.add("DNAMethylation27");
+            //data_types.add("miRNASeq");
+            data_types.add("CNV");
+            //data_types.add("DNAMethylation27");
 
             ArrayList<String> st_tmp = new ArrayList<>();
             /*st_tmp.add("gene");
             st_tmp.add("exon");
-            st_tmp.add("spljxn");*/
+            st_tmp.add("spljxn");
             st_tmp.add("mirna");
-            st_tmp.add("isoform");
+            st_tmp.add("isoform");*/
 
             int count = 0;
             for (String disease: diseases) {

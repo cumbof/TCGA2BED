@@ -44,27 +44,27 @@ public class Settings {
     }
     
     public static String getHGNCArchive() {
-        if (debug) return "D:/WORKSPACE/JAVA-NETBEANS/TCGA2BED/package/appdata/hgnc_archive/";
+        if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/hgnc_archive/";
         return "./appdata/hgnc_archive/";
     }
 
     public static String getNCBIArchive() {
-        if (debug) return "D:/WORKSPACE/JAVA-NETBEANS/TCGA2BED/package/appdata/ncbi_archive/";
+        if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/ncbi_archive/";
         return "./appdata/ncbi_archive/";
     }
 
     public static String getUCSCArchive() {
-        if (debug) return "D:/WORKSPACE/JAVA-NETBEANS/TCGA2BED/package/appdata/ucsc_archive/knownGene.txt";
+        if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/ucsc_archive/knownGene.txt";
         return "./appdata/ucsc_archive/knownGene.txt";
     }
     
     public static String getMIRBASEArchive() {
-        if (debug) return "D:/WORKSPACE/JAVA-NETBEANS/TCGA2BED/package/appdata/mirbase_archive/hsa.gff3";
+        if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/mirbase_archive/hsa.gff3";
         return "./appdata/mirbase_archive/hsa.gff3";
     }
 
     public static String getWGETAbsolutePath() {
-        if (debug) return "D:/WORKSPACE/JAVA-NETBEANS/TCGA2BED/package/appdata/wget.exe";
+        if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/wget.exe";
         else {
             if (OSValidator.isWindows())
                 return "./appdata/wget.exe";
