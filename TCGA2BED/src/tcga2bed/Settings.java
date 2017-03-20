@@ -47,6 +47,11 @@ public class Settings {
         if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/hgnc_archive/";
         return "./appdata/hgnc_archive/";
     }
+    
+    public static String getGRCh36ToGRCh37Archive4OV() {
+        if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/GRCh36ToGRCh37_archive/table.txt";
+        return "./appdata/GRCh36ToGRCh37_archive/table.txt";
+    }
 
     public static String getNCBIArchive() {
         if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/ncbi_archive/";

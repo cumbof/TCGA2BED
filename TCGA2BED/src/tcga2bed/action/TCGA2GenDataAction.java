@@ -21,6 +21,7 @@ import tcga2bed.parser.DNASeqParser;
 import tcga2bed.parser.MIRNASeqParser;
 import tcga2bed.parser.RNASeqParser;
 import tcga2bed.parser.RNASeqV2Parser;
+import tcga2bed.resources.GRCh36_GRCh37_Map4OV;
 import tcga2bed.resources.RetrieveMIRBASEGenomicCoordinates;
 import tcga2bed.resources.RetrieveMirnaFromHGNC;
 import tcga2bed.resources.RetrieveNCBIGenomicCoordinates;
@@ -69,7 +70,7 @@ public class TCGA2GenDataAction extends Action {
         } catch (ArrayIndexOutOfBoundsException e) {
             UCSC_ARCHIVE = "null";
         }
-        RetrieveUCSCGenomicCoordinates.setUcscAarchive(UCSC_ARCHIVE);
+        RetrieveUCSCGenomicCoordinates.setUcscArchive(UCSC_ARCHIVE);
         
         String MIRBASE_ARCHIVE;
         try {
@@ -77,7 +78,7 @@ public class TCGA2GenDataAction extends Action {
         } catch (ArrayIndexOutOfBoundsException e) {
             MIRBASE_ARCHIVE = "null";
         }
-        RetrieveMIRBASEGenomicCoordinates.setMirbaseAarchive(MIRBASE_ARCHIVE);
+        RetrieveMIRBASEGenomicCoordinates.setMirbaseArchive(MIRBASE_ARCHIVE);
         
         String HGNC_ARCHIVE;
         try {
@@ -87,17 +88,25 @@ public class TCGA2GenDataAction extends Action {
         }
         RetrieveMirnaFromHGNC.setHgncArchive(HGNC_ARCHIVE);
         
+        String GRCH36_GRCH37_ARCHIVE;
+        try {
+            GRCH36_GRCH37_ARCHIVE = args[12];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            GRCH36_GRCH37_ARCHIVE = "null";
+        }
+        GRCh36_GRCh37_Map4OV.setGRCh36GRCh37Aarchive(GRCH36_GRCH37_ARCHIVE);
+                
         String MAGETAB_PATH;
         try {
-            MAGETAB_PATH = args[12];
+            MAGETAB_PATH = args[13];
         } catch (ArrayIndexOutOfBoundsException e) {
             MAGETAB_PATH = "null";
         }
         Settings.setMAGETABPath(MAGETAB_PATH);
         
         try {
-            gendata_ext = "."+args[13].toLowerCase();
-            out_format = args[13].toLowerCase();
+            gendata_ext = "."+args[14].toLowerCase();
+            out_format = args[14].toLowerCase();
             metadata_ext = gendata_ext + metadata_ext;
         } catch (ArrayIndexOutOfBoundsException e) {
             gendata_ext = ".bed";

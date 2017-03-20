@@ -524,7 +524,7 @@ public class GUI extends javax.swing.JFrame {
                     Thread thread = new Thread() {
                         @Override
                         public void run() {
-                            String[] args = new String[14];
+                            String[] args = new String[15];
                             args[0] = "convert";
                             args[1] = getDisease_forConverter();
                             args[2] = getMetaSource_forConverter();
@@ -537,9 +537,10 @@ public class GUI extends javax.swing.JFrame {
                             args[9] = Settings.getUCSCArchive();
                             args[10] = Settings.getMIRBASEArchive();
                             args[11] = Settings.getHGNCArchive();
+                            args[12] = Settings.getGRCh36ToGRCh37Archive4OV();
                             
-                            args[12] = Settings.getMAGETABPath();
-                            args[13] = (String)jComboBox7.getSelectedItem();
+                            args[13] = Settings.getMAGETABPath();
+                            args[14] = (String)jComboBox7.getSelectedItem();
                             Action action = new TCGA2GenDataAction();
                             action.execute(args);
                         }

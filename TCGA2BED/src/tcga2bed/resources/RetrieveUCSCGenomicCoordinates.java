@@ -18,7 +18,7 @@ public class RetrieveUCSCGenomicCoordinates {
 
     public static String UCSC_ARCHIVE = "null";
 
-    public static void setUcscAarchive(String arch) {
+    public static void setUcscArchive(String arch) {
         UCSC_ARCHIVE = arch;
     }
 

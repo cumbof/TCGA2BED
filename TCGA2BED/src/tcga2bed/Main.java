@@ -161,7 +161,7 @@ public class Main {
                             st.add("bed");
                         }
                         for (String subtype: st) {
-                            args = new String[13];
+                            args = new String[14];
                             args[0] = "convert";
                             args[1] = disease;
                             args[2] = "E:/ftp-root/tcga_original/"+disease.toLowerCase()+"/meta/Clinical/Biotab/";
@@ -195,7 +195,8 @@ public class Main {
                             args[9] = "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/ucsc_archive/knownGene.txt";
                             args[10] = "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/mirbase_archive/hsa.gff3";
                             args[11] = "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/hgnc_archive/";
-                            args[12] = "E:/ftp-root/tcga_original/"+disease.toLowerCase()+"/"+data_type.toLowerCase()+"/mage-tab/"; // only for cnv
+                            args[12] = "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/GRCh36ToGRCh37_archive/table.txt";
+                            args[13] = "E:/ftp-root/tcga_original/"+disease.toLowerCase()+"/"+data_type.toLowerCase()+"/mage-tab/"; // only for cnv
                             
                             if (inDir.exists()) {
                                 Action action = new TCGA2GenDataAction();

@@ -19,7 +19,7 @@ public class RetrieveMIRBASEGenomicCoordinates {
 
     public static String MIRBASE_ARCHIVE = "null";
 
-    public static void setMirbaseAarchive(String arch) {
+    public static void setMirbaseArchive(String arch) {
         MIRBASE_ARCHIVE = arch;
     }
 
