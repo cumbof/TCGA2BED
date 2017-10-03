@@ -7,6 +7,9 @@
  */
 package tcga2bed;
 
+import java.io.File;
+import java.util.HashMap;
+import tcga2bed.util.ConfigLoader;
 import tcga2bed.util.OSValidator;
 
 /**
@@ -67,16 +70,29 @@ public class Settings {
         if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/mirbase_archive/hsa.gff3";
         return "./appdata/mirbase_archive/hsa.gff3";
     }
+    
+    public static String getAppConfigPath() {
+        if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/config.txt";
+        return "./appdata/config.txt";
+    }
 
     public static String getWGETAbsolutePath() {
         if (debug) return "C:/Users/fabio/Documents/NetBeansProjects/TCGA2BED/package/appdata/wget.exe";
         else {
+            HashMap<String, String> app_config_data = ConfigLoader.loadAppConfig(getAppConfigPath());
+            try {
+                String wget_path = app_config_data.get("wget_absolute_path");
+                if ((new File(wget_path)).exists())
+                    return wget_path;
+            }
+            catch (Exception e) {}
+            
             if (OSValidator.isWindows())
                 return "./appdata/wget.exe";
             else if (OSValidator.isUnix())
                 return "/usr/bin/wget";
             else if (OSValidator.isMac())
-                return "/usr/bin/wget";
+                return "/usr/local/bin/wget";
         }
         return "./appdata/wget.exe";
     }

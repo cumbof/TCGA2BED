@@ -504,8 +504,8 @@ public class RNASeqParser extends BioParser {
             attr_type[4] = "STRING";
             attr_type[5] = "STRING";
             attr_type[6] = "INTEGER";
-            attr_type[7] = "FLOAT";
-            attr_type[8] = "FLOAT";
+            attr_type[7] = "DOUBLE";
+            attr_type[8] = "DOUBLE";
             return attr_type;
         } else if (data_subtype.toLowerCase().equals("exon")) {
             attr_type = new String[7];
@@ -514,8 +514,8 @@ public class RNASeqParser extends BioParser {
             attr_type[2] = "LONG";
             attr_type[3] = "CHAR";
             attr_type[4] = "INTEGER";
-            attr_type[5] = "FLOAT";
-            attr_type[6] = "FLOAT";
+            attr_type[5] = "DOUBLE";
+            attr_type[6] = "DOUBLE";
             return attr_type;
         } else if (data_subtype.toLowerCase().equals("spljxn")) {
             attr_type = new String[7];

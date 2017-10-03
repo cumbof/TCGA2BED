@@ -453,7 +453,7 @@ public class MIRNASeqParser extends BioParser {
             attr_type[4] = "STRING";
             attr_type[5] = "STRING";
             attr_type[6] = "INTEGER";
-            attr_type[7] = "FLOAT";
+            attr_type[7] = "DOUBLE";
             attr_type[8] = "STRING";
             attr_type[9] = "STRING";
             attr_type[10] = "STRING";

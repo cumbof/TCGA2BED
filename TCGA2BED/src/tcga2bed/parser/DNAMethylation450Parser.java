@@ -429,7 +429,7 @@ public class DNAMethylation450Parser extends BioParser {
         attr_type[2] = "LONG";
         attr_type[3] = "CHAR";
         attr_type[4] = "STRING";
-        attr_type[5] = "FLOAT";
+        attr_type[5] = "DOUBLE";
         attr_type[6] = "STRING";
         attr_type[7] = "STRING";
         return attr_type;

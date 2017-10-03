@@ -300,7 +300,7 @@ public class CNVParser extends BioParser {
         attr_type[2] = "LONG";
         attr_type[3] = "CHAR";
         attr_type[4] = "INTEGER";
-        attr_type[5] = "FLOAT";
+        attr_type[5] = "DOUBLE";
         attr_type[6] = "STRING";
         return attr_type;
     }

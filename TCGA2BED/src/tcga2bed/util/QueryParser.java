@@ -80,7 +80,7 @@ public class QueryParser {
             count++;
             if (count > _downloadRecursiveRequestsLimit)
                 return false;
-            return downloadDataFromUrl(url, out_path, count);		// if malformed url : loop!!!
+            return downloadDataFromUrl(url, out_path, count); // if malformed url : loop!!!
         } catch (IOException e) {
             //Main.printException(e, true);
             //return false;

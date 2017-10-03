@@ -529,10 +529,10 @@ public class RNASeqV2Parser extends BioParser {
             attr_type[3] = "CHAR";
             attr_type[4] = "STRING";
             attr_type[5] = "STRING";
-            attr_type[6] = "FLOAT";
-            attr_type[7] = "FLOAT";
+            attr_type[6] = "DOUBLE";
+            attr_type[7] = "DOUBLE";
             attr_type[8] = "STRING";
-            attr_type[9] = "FLOAT";
+            attr_type[9] = "DOUBLE";
             return attr_type;
         } else if (data_subtype.toLowerCase().equals("isoform")) {
             String[] attr_type = new String[10];
@@ -543,9 +543,9 @@ public class RNASeqV2Parser extends BioParser {
             attr_type[4] = "STRING";
             attr_type[5] = "STRING";
             attr_type[6] = "STRING";
-            attr_type[7] = "FLOAT";
-            attr_type[8] = "FLOAT";
-            attr_type[9] = "FLOAT";
+            attr_type[7] = "DOUBLE";
+            attr_type[8] = "DOUBLE";
+            attr_type[9] = "DOUBLE";
             return attr_type;
         }
         return null;

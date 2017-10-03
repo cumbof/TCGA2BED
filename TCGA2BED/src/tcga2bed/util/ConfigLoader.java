@@ -7,6 +7,11 @@
  */
 package tcga2bed.util;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -88,6 +93,27 @@ public class ConfigLoader {
         }
         Collections.sort(idsInteger);
         return idsInteger;
+    }
+    
+    public static HashMap<String, String> loadAppConfig(String app_config_path) {
+        HashMap<String, String> config_data = new HashMap<>();
+        try {
+            InputStream fstream = new FileInputStream(app_config_path);
+            DataInputStream in = new DataInputStream(fstream);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (!line.trim().equals("")) {
+                    String[] line_split = line.trim().split("=");
+                    config_data.put(line_split[0].trim().toLowerCase(), line_split[1].trim());
+                }
+            }
+            br.close();
+            in.close();
+            fstream.close();
+        } catch (Exception e) {
+        }
+        return config_data;
     }
 
 }
