@@ -38,7 +38,7 @@ public class FileOutputWriter {
             PrintStream out = new PrintStream(fos);
 
             out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-            out.println("<gmqlSchemaCollection name=\"GLOBAL_SCHEMAS\" xmlns=\"http://genomic.elet.polimi.it/entities\" name=\"GLOBAL_SCHEMAS\">");
+            out.println("<gmqlSchemaCollection name=\"GLOBAL_SCHEMAS\" xmlns=\"http://genomic.elet.polimi.it/entities\">");
             out.println("\t<gmqlSchema type=\"tab\" coordinate_system=\"1-based\">");
 
             for (int i = 0; i < header.length; i++) {
