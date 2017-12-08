@@ -6,7 +6,3 @@ TCGA2BED is a Java software tool that allows searching and retrieving all public
 
 ### Public data repository
 [ftp://bioinf.iasi.cnr.it/](ftp://bioinf.iasi.cnr.it/)
-
-### Team
-* Emanuel Weitschek
-* Fabio Cumbo
