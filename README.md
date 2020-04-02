@@ -7,5 +7,8 @@ TCGA2BED is a Java software tool that allows searching and retrieving all public
 ### Public data repository
 [ftp://bioinf.iasi.cnr.it/](ftp://bioinf.iasi.cnr.it/)
 
-### Publication
-Fabio Cumbo, Giulia Fiscon, Stefano Ceri, Marco Masseroli, and Emanuel Weitschek, [**TCGA2BED: extracting, extending, integrating, and querying The Cancer Genome Atlas**](https://dx.doi.org/10.1186/s12859-016-1419-5), *BMC Bioinformatics* (2017) 18 1:6
+### Credits
+
+Please credit OpenOmics in your manuscript by citing:
+
+> Fabio Cumbo, Giulia Fiscon, Stefano Ceri, Marco Masseroli, and Emanuel Weitschek. "TCGA2BED: extracting, extending, integrating, and querying The Cancer Genome Atlas." BMC Bioinformatics (2017) 18 1:6. [https://dx.doi.org/10.1186/s12859-016-1419-5](https://dx.doi.org/10.1186/s12859-016-1419-5)
